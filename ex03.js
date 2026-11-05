@@ -14,3 +14,16 @@
 // Run: node ex03.js
 
 // write your code here
+function countdown(count) {
+    console.log(count)
+    if (count > 0) {
+        setTimeout(() => {
+            
+            countdown(count - 1)
+        }, 1000);
+    } else {
+        console.log("Time's up!")
+    }
+
+}
+countdown(5)
