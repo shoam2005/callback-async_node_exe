@@ -15,3 +15,21 @@
 const os = require("os");
 
 // write your code here
+
+let count = 0;
+
+const intervalId = setInterval(() => {
+    const free = os.freemem();
+    const total = os.totalmem();
+    
+    const freePercentage = ((free / total) * 100).toFixed(2);
+    
+    console.log(`Free Memory: ${freePercentage}%`);
+    
+    count++;
+    
+    if (count === 5) {
+        clearInterval(intervalId);
+        console.log("Memory logging complete.");
+    }
+}, 2000);
