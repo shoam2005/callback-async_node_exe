@@ -12,3 +12,12 @@
 // Run: node ex10.js
 
 // write your code here
+setTimeout(() => {
+    setTimeout(() => {
+        setTimeout(() => {
+            console.log('Message 3')
+        }, 1000);
+        console.log('Message 2')
+    }, 1000);
+    console.log('Message 1')
+}, 1000);
