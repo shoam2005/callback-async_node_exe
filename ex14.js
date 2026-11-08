@@ -18,3 +18,16 @@
 // Run: node ex14.js
 
 // write your code here
+setTimeout(() => {
+    setTimeout(() => {
+        setTimeout(() => {
+            setTimeout(() => {
+                console.log('Done!')
+            }, 500 + Math.random() * 1000);
+            console.log('0')
+        }, 500 + Math.random() * 1000);
+        console.log('1')
+    }, 500 + Math.random() * 1000);
+    console.log('2')
+}, 500 + Math.random() * 1000);
+console.log('3')
