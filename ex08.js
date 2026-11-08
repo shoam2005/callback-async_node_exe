@@ -16,3 +16,23 @@ const path = require("path");
 const filePath = path.join(__dirname, "temp.txt");
 
 // write your code here
+
+if (fs.access(filePath, fs.constants.F_OK, (err) => {
+    if (err) {
+        console.log('File not found.')
+
+    } else {
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.err('delete file failed:', err)
+                return;
+            }
+            else {
+                console.log('File deleted.')
+            }
+        });
+    }
+}));
+
+
+
